@@ -1,4 +1,5 @@
-"""
+"""Mundo pequeno.
+
 Como um programador muito popular, você conhece muitas pessoas em seu país.
 Como você viaja muito, você decidiu que seria muito útil de ter um programa que
 te dissesse quais de seus amigos estão mais próximos baseado em qual amigo você
@@ -18,12 +19,16 @@ from unittest import TestCase, main
 
 import mundopequeno
 
+
 class TesteMundo(TestCase):
     """Classe de teste mundo pequeno."""
 
-
-    def test_posicao_igual(self):
+    def testa_posicao_dos_amigos_sao_iguais(self):
         """Função para testar posição iguais."""
-        amg1 = [1,2]
-        amg2 = [1,2]
-        esperado = ''
+        amg1 = [1, 2]
+        amg2 = [1, 2]
+        esperado = 'Dois amigos não podem viver na mesma localização'
+        self.assertEqual(mundopequeno.amigos(amg1, amg2), esperado)
+
+
+main()
